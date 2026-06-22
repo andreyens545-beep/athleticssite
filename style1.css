@@ -1,0 +1,297 @@
+/* ============================================
+   style1.css — стили внутренних страниц
+   Подключает базу + специфика страниц
+   ============================================ */
+
+@import url("style.css");
+
+/* --- Таблица атлетов — премиальный стиль --- */
+.athletes-table-wrap {
+    overflow-x: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+}
+
+.athletes-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.athletes-table th,
+.athletes-table td {
+    padding: 16px 14px;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+}
+
+.athletes-table th {
+    background: var(--gradient-gold);
+    color: var(--white);
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.athletes-table tbody tr {
+    transition: background 0.3s, transform 0.3s;
+}
+
+.athletes-table tbody tr:hover {
+    background: rgba(201, 168, 76, 0.08);
+    transform: scale(1.01);
+}
+
+.athletes-table img {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--gold);
+    filter: sepia(25%);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.athletes-table tbody tr:hover img {
+    transform: scale(1.08);
+    box-shadow: 0 0 16px var(--gold-glow);
+}
+
+.athletes-table td strong {
+    font-family: var(--font-heading);
+    color: var(--burgundy-dark);
+}
+
+/* --- Форма теста --- */
+.quiz-form {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    padding: 32px;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-soft);
+}
+
+.quiz-form fieldset {
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.3);
+    transition: box-shadow 0.3s;
+}
+
+.quiz-form fieldset:hover {
+    box-shadow: 0 4px 20px rgba(201, 168, 76, 0.15);
+}
+
+.quiz-form legend {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--burgundy-dark);
+    padding: 0 12px;
+    font-size: 1.05rem;
+}
+
+.quiz-form label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    line-height: 1.5;
+    padding: 8px 12px;
+    border-radius: 12px;
+    transition: background 0.3s;
+}
+
+.quiz-form label:hover {
+    background: rgba(201, 168, 76, 0.1);
+}
+
+.quiz-form input[type="checkbox"],
+.quiz-form input[type="radio"] {
+    accent-color: var(--burgundy);
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.timer-box {
+    background: var(--gradient-gold);
+    color: var(--white);
+    text-align: center;
+    padding: 18px;
+    margin-bottom: 28px;
+    border-radius: var(--radius-lg);
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    box-shadow: var(--shadow-soft);
+    letter-spacing: 0.05em;
+}
+
+.timer-box.timer-warning {
+    background: linear-gradient(135deg, #8B0000, #DC143C);
+    animation: pulseTimer 1s ease infinite;
+}
+
+@keyframes pulseTimer {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(220, 20, 60, 0.4); }
+    50% { box-shadow: 0 0 0 12px rgba(220, 20, 60, 0); }
+}
+
+/* --- Галерея --- */
+.gallery-container {
+    text-align: center;
+}
+
+.gallery-viewport {
+    position: relative;
+    max-width: 700px;
+    margin: 28px auto;
+    overflow: hidden;
+    border-radius: var(--radius-xl);
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-hover);
+}
+
+.gallery-slide {
+    display: none;
+    padding: 16px;
+    animation: fadeInUp 0.5s ease;
+}
+
+.gallery-slide.active {
+    display: block;
+}
+
+.gallery-slide img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    filter: sepia(25%) contrast(1.05);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.gallery-slide img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px var(--gold-glow);
+}
+
+.gallery-caption {
+    margin-top: 16px;
+    padding: 14px 20px;
+    background: rgba(26, 42, 58, 0.06);
+    border-radius: var(--radius-lg);
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--navy);
+    opacity: 0.75;
+    transition: opacity 0.4s, transform 0.4s;
+}
+
+.gallery-slide:hover .gallery-caption {
+    opacity: 1;
+    transform: translateY(-4px);
+    color: var(--burgundy-dark);
+}
+
+.gallery-controls {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.gallery-counter {
+    margin-top: 12px;
+    font-family: var(--font-heading);
+    color: var(--gold);
+    font-size: 1.1rem;
+}
+
+.gallery-thumbs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.gallery-thumbs figure {
+    width: 110px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    background: var(--white);
+}
+
+.gallery-thumbs figure:hover,
+.gallery-thumbs figure.active-thumb {
+    border-color: var(--gold);
+    transform: scale(1.08);
+    box-shadow: 0 8px 24px var(--gold-glow);
+}
+
+.gallery-thumbs img {
+    width: 100%;
+    height: 72px;
+    object-fit: cover;
+    filter: sepia(30%);
+}
+
+.gallery-thumbs figcaption {
+    font-size: 0.7rem;
+    padding: 6px;
+    background: var(--cream);
+    color: var(--navy);
+    font-family: var(--font-heading);
+}
+
+/* --- Хронология истории — timeline --- */
+.timeline-marker {
+    display: inline-block;
+    background: var(--gradient-gold);
+    color: var(--white);
+    padding: 4px 14px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.note {
+    background: rgba(201, 168, 76, 0.1);
+    padding: 20px;
+    margin-top: 16px;
+    border-left: 4px solid var(--gold);
+    border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+}
+
+.note h4 {
+    color: var(--burgundy) !important;
+}
+
+/* --- Код в тексте --- */
+code {
+    background: rgba(201, 168, 76, 0.15);
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    color: var(--burgundy-dark);
+}

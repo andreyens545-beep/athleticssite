@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест по лёгкой атлетике</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body class="page-inner">
+
+    <div class="marble-bg"></div>
+    <div class="grain-overlay"></div>
+
+    <nav class="main-nav" id="mainNav">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="history.html">История</a></li>
+            <li><a href="athletes.html">Атлеты</a></li>
+            <li><a href="quiz.html" class="active">Тест</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+        </ul>
+    </nav>
+
+    <header class="site-header hero">
+        <div class="hero-parallax" id="heroParallax"></div>
+        <div class="hero-column hero-column--left"></div>
+        <div class="hero-column hero-column--right"></div>
+        <div class="hero-content">
+            <div class="laurel-wreath">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="50" rx="38" ry="42" fill="none" stroke="#D4AF37" stroke-width="2"/></svg>
+            </div>
+            <h1>История развития лёгкой атлетики</h1>
+            <p class="tagline">Проверьте свои знания</p>
+        </div>
+    </header>
+
+    <div class="meander-border"></div>
+
+    <main class="content">
+        <h1 class="page-title fade-in">Тест: Лёгкая атлетика</h1>
+
+        <div class="timer-box fade-in" id="timerBox">
+            Осталось времени: <span id="timerDisplay">300</span> сек
+        </div>
+
+        <form class="quiz-form fade-in" id="quizForm">
+            <fieldset>
+                <legend>Вопрос 1: Какие дисциплины относятся к беговым видам? (несколько ответов)</legend>
+                <label><input type="checkbox" name="q1" value="100m"> Бег на 100 метров</label>
+                <label><input type="checkbox" name="q1" value="longjump"> Прыжок в длину</label>
+                <label><input type="checkbox" name="q1" value="marathon"> Марафон</label>
+                <label><input type="checkbox" name="q1" value="shot"> Метание ядра</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Вопрос 2: Какие метательные дисциплины существуют? (несколько ответов)</legend>
+                <label><input type="checkbox" name="q2" value="discus"> Метание диска</label>
+                <label><input type="checkbox" name="q2" value="highjump"> Прыжок в высоту</label>
+                <label><input type="checkbox" name="q2" value="javelin"> Метание копья</label>
+                <label><input type="checkbox" name="q2" value="hammer"> Метание молота</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Вопрос 3: Какие события связаны с историей лёгкой атлетики? (несколько ответов)</legend>
+                <label><input type="checkbox" name="q3" value="776"> Первые Олимпийские игры — 776 г. до н.э.</label>
+                <label><input type="checkbox" name="q3" value="1896"> Современные Олимпиады — с 1896 г.</label>
+                <label><input type="checkbox" name="q3" value="1912"> Основание IAAF — 1912 г.</label>
+                <label><input type="checkbox" name="q3" value="2000"> Первый марафон — 2000 г.</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Вопрос 4: Кто установил мировой рекорд в беге на 100 м (9,58 сек)?</legend>
+                <label><input type="radio" name="q4" value="bolt"> Usain Bolt</label>
+                <label><input type="radio" name="q4" value="powell"> Asafa Powell</label>
+                <label><input type="radio" name="q4" value="gaye"> Tyson Gay</label>
+                <label><input type="radio" name="q4" value="lewis"> Carl Lewis</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Вопрос 5: Где проходили первые современные Олимпийские игры?</legend>
+                <label><input type="radio" name="q5" value="athens"> Афины, Греция</label>
+                <label><input type="radio" name="q5" value="paris"> Париж, Франция</label>
+                <label><input type="radio" name="q5" value="london"> Лондон, Великобритания</label>
+                <label><input type="radio" name="q5" value="rome"> Рим, Италия</label>
+            </fieldset>
+
+            <button type="button" id="checkQuizBtn" class="btn">Проверить</button>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <div class="gold-divider"><svg class="laurel-icon" viewBox="0 0 32 32"><path d="M16 4 L18 12 L16 10 L14 12 Z" fill="#D4AF37"/></svg></div>
+        <p class="footer-motto">Быстрее, выше, сильнее — вместе</p>
+        <p class="footer-motto-en">Citius, Altius, Fortius — Communiter</p>
+        <p>&copy; 2026 История лёгкой атлетики</p>
+        <div class="ticker-wrap">
+            <marquee behavior="scroll" direction="left" class="ticker">
+                Удачи на тесте! • Время ограничено — ответьте на все 5 вопросов
+            </marquee>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

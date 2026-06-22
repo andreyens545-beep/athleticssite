@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лёгкая атлетика — Главная</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-home">
+
+    <div class="marble-bg"></div>
+    <div class="grain-overlay"></div>
+
+    <!-- Фиксированная навигация -->
+    <nav class="main-nav" id="mainNav">
+        <ul>
+            <li><a href="index.html" class="active">Главная</a></li>
+            <li><a href="history.html">История</a></li>
+            <li><a href="athletes.html">Атлеты</a></li>
+            <li><a href="quiz.html">Тест</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+        </ul>
+    </nav>
+
+    <!-- Герой-блок с параллаксом и античными элементами -->
+    <header class="site-header hero">
+        <div class="hero-parallax" id="heroParallax"></div>
+        <div class="hero-column hero-column--left"></div>
+        <div class="hero-column hero-column--right"></div>
+        <div class="hero-content">
+            <div class="laurel-wreath">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <ellipse cx="50" cy="50" rx="38" ry="42" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                    <path d="M15 55 Q25 30 35 45" fill="none" stroke="#C9A84C" stroke-width="2.5"/>
+                    <path d="M85 55 Q75 30 65 45" fill="none" stroke="#C9A84C" stroke-width="2.5"/>
+                    <ellipse cx="28" cy="42" rx="8" ry="14" fill="#C9A84C" opacity="0.7" transform="rotate(-30 28 42)"/>
+                    <ellipse cx="72" cy="42" rx="8" ry="14" fill="#C9A84C" opacity="0.7" transform="rotate(30 72 42)"/>
+                    <ellipse cx="20" cy="58" rx="7" ry="12" fill="#D4AF37" opacity="0.6" transform="rotate(-20 20 58)"/>
+                    <ellipse cx="80" cy="58" rx="7" ry="12" fill="#D4AF37" opacity="0.6" transform="rotate(20 80 58)"/>
+                </svg>
+            </div>
+            <h1>История развития лёгкой атлетики</h1>
+            <p class="tagline"><em>Королева спорта</em> — от античных стадионов до современных арен</p>
+            <div class="olympic-rings" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="gold-divider">
+                <svg class="laurel-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 4 L18 12 L16 10 L14 12 Z" fill="#D4AF37"/>
+                    <path d="M8 16 Q12 8 16 12 Q20 8 24 16" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <div class="meander-border"></div>
+
+    <main class="content">
+
+        <!-- Анимированные счётчики при скролле -->
+        <section class="stats-section">
+            <div class="stat-card glass-card fade-in">
+                <span class="stat-number" data-target="776" data-suffix="">0</span>
+                <span class="stat-label">г. до н.э. — первые Олимпийские игры</span>
+            </div>
+            <div class="stat-card glass-card fade-in">
+                <span class="stat-number" data-target="47" data-suffix="">0</span>
+                <span class="stat-label">дисциплин в программе World Athletics</span>
+            </div>
+            <div class="stat-card glass-card fade-in">
+                <span class="stat-number" data-target="200" data-suffix="+">0</span>
+                <span class="stat-label">стран — членов мировой федерации</span>
+            </div>
+            <div class="stat-card glass-card fade-in">
+                <span class="stat-number" data-target="130" data-suffix="+">0</span>
+                <span class="stat-label">лет современной олимпийской истории</span>
+            </div>
+        </section>
+
+        <section class="welcome glass-card fade-in">
+            <h2>Добро пожаловать!</h2>
+            <p>
+                <strong>Лёгкая атлетика</strong> — один из древнейших и самых популярных видов спорта.
+                Она объединяет соревнования по <span>бегу, прыжкам и метаниям</span>, проверяя
+                скорость, выносливость, силу и координацию спортсменов.
+            </p>
+            <blockquote cite="https://worldathletics.org">
+                Лёгкая атлетика — основа олимпийского движения и зеркало человеческих возможностей.
+            </blockquote>
+        </section>
+
+        <section class="about glass-card fade-in">
+            <h3>Что такое лёгкая атлетика?</h3>
+            <article>
+                <p>
+                    Лёгкая атлетика включает множество дисциплин, которые делятся на три большие группы:
+                    беговые, прыжковые и метательные виды. Соревнования проводятся на стадионах,
+                    в манежах и на шоссе. Результаты фиксируются с точностью до сотых и тысячных долей секунды
+                    или сантиметра.
+                </p>
+                <dl>
+                    <dt>Международная федерация</dt>
+                    <dd>World Athletics (ранее IAAF)</dd>
+                    <dt>Главное событие</dt>
+                    <dd>Олимпийские игры и чемпионат мира</dd>
+                </dl>
+            </article>
+        </section>
+
+        <section class="disciplines glass-card fade-in">
+            <h3>Основные дисциплины</h3>
+            <ul>
+                <li>Спринт (100 м, 200 м, 400 м)</li>
+                <li>Барьерный бег (110 м, 400 м)</li>
+                <li>Средние и длинные дистанции (800 м — марафон)</li>
+                <li>Эстафета 4×100 м и 4×400 м</li>
+                <li>Ходьба спортивная (20 км, 50 км)</li>
+                <li>Прыжки: в длину, высоту, с шестом, тройной</li>
+                <li>Метания: ядро, диск, молот, копьё</li>
+                <li>Десятиборье и семиборье</li>
+            </ul>
+            <hr>
+            <p>Нажмите кнопку, чтобы узнать случайную дисциплину дня:</p>
+            <button type="button" id="disciplineBtn" class="btn">Дисциплина дня</button>
+            <output id="disciplineOutput" class="discipline-output"></output>
+        </section>
+
+        <aside class="sidebar glass-card fade-in">
+            <h4>Полезные ссылки</h4>
+            <ol>
+                <li><a href="history.html">Изучить историю</a></li>
+                <li><a href="athletes.html">Познакомиться с легендами</a></li>
+                <li><a href="quiz.html">Проверить знания</a></li>
+            </ol>
+            <time datetime="2026-06-22">Обновлено: 22 июня 2026</time>
+        </aside>
+    </main>
+
+    <footer class="site-footer">
+        <div class="gold-divider">
+            <svg class="laurel-icon" viewBox="0 0 32 32"><path d="M16 4 L18 12 L16 10 L14 12 Z" fill="#D4AF37"/></svg>
+        </div>
+        <p class="footer-motto">Быстрее, выше, сильнее — вместе</p>
+        <p class="footer-motto-en">Citius, Altius, Fortius — Communiter</p>
+        <div class="footer-icons">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8 6 4 8 4 12c0 4 3.5 8 8 10 4.5-2 8-6 8-10 0-4-4-6-8-10z" fill="#C9A84C"/></svg>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#C9A84C" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="#C9A84C"/></svg>
+        </div>
+        <p>&copy; 2026 История лёгкой атлетики. Все права защищены.</p>
+        <div class="ticker-wrap">
+            <marquee behavior="scroll" direction="left" class="ticker">
+                Олимпийские игры 2024 — новые рекорды в прыжках с шестом! • Чемпионат мира 2025 — три золота для сборной Кении • Марафон Boston 2026 — лучшее время сезона
+            </marquee>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея лёгкой атлетики</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body class="page-inner">
+
+    <div class="marble-bg"></div>
+    <div class="grain-overlay"></div>
+
+    <nav class="main-nav" id="mainNav">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="history.html">История</a></li>
+            <li><a href="athletes.html">Атлеты</a></li>
+            <li><a href="quiz.html">Тест</a></li>
+            <li><a href="gallery.html" class="active">Галерея</a></li>
+        </ul>
+    </nav>
+
+    <header class="site-header hero">
+        <div class="hero-parallax" id="heroParallax"></div>
+        <div class="hero-column hero-column--left"></div>
+        <div class="hero-column hero-column--right"></div>
+        <div class="hero-content">
+            <div class="laurel-wreath">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="50" rx="38" ry="42" fill="none" stroke="#D4AF37" stroke-width="2"/></svg>
+            </div>
+            <h1>История развития лёгкой атлетики</h1>
+            <p class="tagline">Фотогалерея</p>
+        </div>
+    </header>
+
+    <div class="meander-border"></div>
+
+    <main class="content gallery-container">
+        <h1 class="page-title fade-in">Галерея моментов лёгкой атлетики</h1>
+        <p class="lead fade-in">Используйте кнопки «Назад» и «Вперёд» или наведите курсор на изображение.</p>
+
+        <div class="gallery-viewport fade-in" id="galleryViewport">
+            <div class="gallery-slide active" data-index="0">
+                <div class="img-vintage-wrap">
+                    <img class="img-vintage" src="gallery-1.jpg" alt="Спринт">
+                </div>
+                <p class="gallery-caption">Спринтерский финиш — борьба за каждую сотую секунды</p>
+            </div>
+            <div class="gallery-slide" data-index="1">
+                <div class="img-vintage-wrap">
+                    <img class="img-vintage" src="gallery-2.jpg" alt="Марафон">
+                </div>
+                <p class="gallery-caption">Марафон — испытание на выносливость и силу воли</p>
+            </div>
+            <div class="gallery-slide" data-index="2">
+                <div class="img-vintage-wrap">
+                    <img class="img-vintage" src="gallery-3.jpg" alt="Прыжок в длину">
+                </div>
+                <p class="gallery-caption">Прыжок в длину — полёт и точное приземление</p>
+            </div>
+            <div class="gallery-slide" data-index="3">
+                <div class="img-vintage-wrap">
+                    <img class="img-vintage" src="gallery-4.jpg" alt="Метание диска">
+                </div>
+                <p class="gallery-caption">Метание диска — древняя дисциплина античных Олимпий</p>
+            </div>
+            <div class="gallery-slide" data-index="4">
+                <div class="img-vintage-wrap">
+                    <img class="img-vintage" src="gallery-5.jpg" alt="Барьерный бег">
+                </div>
+                <p class="gallery-caption">Барьерный бег — скорость и техника преодоления препятствий</p>
+            </div>
+            <div class="gallery-slide" data-index="5">
+                <div class="img-vintage-wrap">
+                    <img class="img-vintage" src="gallery-6.jpg" alt="Стадион">
+                </div>
+                <p class="gallery-caption">Современный стадион — арена великих достижений</p>
+            </div>
+        </div>
+
+        <div class="gallery-controls fade-in">
+            <button type="button" id="prevBtn" class="btn">Назад</button>
+            <button type="button" id="nextBtn" class="btn">Вперёд</button>
+        </div>
+        <p class="gallery-counter">Слайд <span id="slideNumber">1</span> из 6</p>
+
+        <div class="gallery-thumbs fade-in" id="galleryThumbs">
+            <figure data-slide="0" class="active-thumb">
+                <img src="gallery-1.jpg?w=120&q=60" alt="Спринт">
+                <figcaption>Спринт</figcaption>
+            </figure>
+            <figure data-slide="1">
+                <img src="gallery-2.jpg?w=120&q=60" alt="Марафон">
+                <figcaption>Марафон</figcaption>
+            </figure>
+            <figure data-slide="2">
+                <img src="gallery-3.jpg?w=120&q=60" alt="Прыжок">
+                <figcaption>Прыжок</figcaption>
+            </figure>
+            <figure data-slide="3">
+                <img src="gallery-4.jpg?w=120&q=60" alt="Диск">
+                <figcaption>Диск</figcaption>
+            </figure>
+            <figure data-slide="4">
+                <img src="gallery-5.jpg?w=120&q=60" alt="Барьеры">
+                <figcaption>Барьеры</figcaption>
+            </figure>
+            <figure data-slide="5">
+                <img src="gallery-6.jpg?w=120&q=60" alt="Стадион">
+                <figcaption>Стадион</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="gold-divider"><svg class="laurel-icon" viewBox="0 0 32 32"><path d="M16 4 L18 12 L16 10 L14 12 Z" fill="#D4AF37"/></svg></div>
+        <p class="footer-motto">Быстрее, выше, сильнее — вместе</p>
+        <p class="footer-motto-en">Citius, Altius, Fortius — Communiter</p>
+        <p>&copy; 2026 История лёгкой атлетики</p>
+        <div class="ticker-wrap">
+            <marquee behavior="scroll" direction="left" class="ticker">
+                Галерея лёгкой атлетики • Наведите курсор на фото для увеличения
+            </marquee>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

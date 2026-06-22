@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Великие атлеты</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body class="page-inner">
+
+    <div class="marble-bg"></div>
+    <div class="grain-overlay"></div>
+
+    <nav class="main-nav" id="mainNav">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="history.html">История</a></li>
+            <li><a href="athletes.html" class="active">Атлеты</a></li>
+            <li><a href="quiz.html">Тест</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+        </ul>
+    </nav>
+
+    <header class="site-header hero">
+        <div class="hero-parallax" id="heroParallax"></div>
+        <div class="hero-column hero-column--left"></div>
+        <div class="hero-column hero-column--right"></div>
+        <div class="hero-content">
+            <div class="laurel-wreath">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="50" rx="38" ry="42" fill="none" stroke="#D4AF37" stroke-width="2"/></svg>
+            </div>
+            <h1>История развития лёгкой атлетики</h1>
+            <p class="tagline">Легенды королевы спорта</p>
+        </div>
+    </header>
+
+    <div class="meander-border"></div>
+
+    <main class="content">
+        <h1 class="page-title fade-in">Великие атлеты мировой истории</h1>
+        <p class="lead fade-in">
+            Ниже представлена таблица выдающихся спортсменов. Данные
+            формируются <strong>динамически</strong> из массива объектов JavaScript.
+        </p>
+
+        <div class="athletes-table-wrap fade-in">
+            <table class="athletes-table">
+                <thead>
+                    <tr>
+                        <th>Фото</th>
+                        <th>Имя</th>
+                        <th>Страна</th>
+                        <th>Достижения</th>
+                    </tr>
+                </thead>
+                <tbody id="athletesBody"></tbody>
+            </table>
+        </div>
+
+        <section class="history-block fade-in">
+            <h3>О таблице</h3>
+            <p>
+                Каждый спортсмен в массиве <code>athletes</code> представлен объектом
+                с полями: имя, страна, достижения и URL фотографии-заглушки.
+            </p>
+            <button type="button" id="sortAthletesBtn" class="btn">Сортировать по имени (А–Я)</button>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="gold-divider"><svg class="laurel-icon" viewBox="0 0 32 32"><path d="M16 4 L18 12 L16 10 L14 12 Z" fill="#D4AF37"/></svg></div>
+        <p class="footer-motto">Быстрее, выше, сильнее — вместе</p>
+        <p class="footer-motto-en">Citius, Altius, Fortius — Communiter</p>
+        <p>&copy; 2026 История лёгкой атлетики</p>
+        <div class="ticker-wrap">
+            <marquee behavior="scroll" direction="left" class="ticker">
+                Usain Bolt — 9,58 сек • Eliud Kipchoge — 2:01:09 марафон • Sergey Bubka — 35 рекордов в прыжках с шестом
+            </marquee>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
